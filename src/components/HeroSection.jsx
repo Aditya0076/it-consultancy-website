@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Button, Modal } from "flowbite-react";
+import { useState, useEffect } from "react";
+import { Button } from "flowbite-react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const HeroSection = ({ isDarkMode }) => {
@@ -52,17 +52,29 @@ const HeroSection = ({ isDarkMode }) => {
   }, [projects.length]);
 
   return (
-    <div className={`min-h-screen w-full flex items-center relative text-white`}>
+    <div
+      className={`min-h-screen w-full flex items-center relative text-white`}>
       <div className="container mx-auto flex flex-col lg:flex-row items-center relative z-10">
         <div className="text-center lg:text-left lg:w-1/2">
           <h4 className="text-xl font-semibold">MEMPERDAYAKAN BISNIS ANDA</h4>
-          <h2 className="text-6xl font-bold mt-2">Solusi Web & Mobile Inovatif</h2>
+          <h2 className="text-6xl font-bold mt-2">
+            Solusi Web & Mobile Inovatif
+          </h2>
           <p className="mt-4 text-lg leading-relaxed">
-            Ubah ide Anda menjadi solusi digital yang kuat dengan layanan pengembangan web dan mobile kami yang canggih. Kami menyediakan layanan pembuatan web dan mobile yang sesuai dengan kebutuhan bisnis Anda, memastikan keunggulan teknologi dan pengalaman pengguna yang luar biasa.
+            Ubah ide Anda menjadi solusi digital yang kuat dengan layanan
+            pengembangan web dan mobile kami yang canggih. Kami menyediakan
+            layanan pembuatan web dan mobile yang sesuai dengan kebutuhan bisnis
+            Anda, memastikan keunggulan teknologi dan pengalaman pengguna yang
+            luar biasa.
           </p>
           <div className="flex justify-center lg:justify-start mt-6">
-            <Link to="/portfolio"> {/* Link to Portfolio page */}
-              <Button className={`bg-${isDarkMode ? "dark" : "white"} text-${isDarkMode ? "white" : "blue-500"} font-semibold`}>
+            <Link to="/portfolio">
+              {" "}
+              {/* Link to Portfolio page */}
+              <Button
+                className={`bg-${isDarkMode ? "dark" : "white"} text-${
+                  isDarkMode ? "white" : "blue-500"
+                } font-semibold`}>
                 Lihat Proyek Kami
               </Button>
             </Link>
@@ -79,9 +91,10 @@ const HeroSection = ({ isDarkMode }) => {
               {projects.map((project, index) => (
                 <div
                   key={index}
-                  className={`w-3 h-3 rounded-full mr-2 cursor-pointer ${index === currentIndex ? "bg-blue-500" : "bg-gray-300"}`}
-                  onClick={() => setCurrentIndex(index)}
-                ></div>
+                  className={`w-3 h-3 rounded-full mr-2 cursor-pointer ${
+                    index === currentIndex ? "bg-white" : "bg-gray-300"
+                  }`}
+                  onClick={() => setCurrentIndex(index)}></div>
               ))}
             </div>
           </div>
