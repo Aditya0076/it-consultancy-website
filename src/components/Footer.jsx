@@ -1,3 +1,4 @@
+import Copyright from "./microComponents/icons/copyright/Copyright";
 import Discord from "./microComponents/icons/Dishcord";
 import Facebook from "./microComponents/icons/Facebook";
 import Github from "./microComponents/icons/Github";
@@ -116,15 +117,7 @@ const FooterComponent = () => {
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2025{" "}
-            <a
-              href="/"
-              className="hover:underline text-gray-900 dark:text-white">
-              Syntax Threads Generation™
-            </a>
-            . All Rights Reserved.
-          </span>
+          <Copyright />
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <Facebook link="https://www.facebook.com/syntaxthreads" />
             <Discord link="https://discord.com/invite/9m9qZj7" />
