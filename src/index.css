@@ -1,4 +1,9 @@
- /* src/index.css */
- @tailwind base;
- @tailwind components;
- @tailwind utilities;
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+div#root {
+  background-color: black;
+  height: 100vh;
+}
