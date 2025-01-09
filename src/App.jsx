@@ -48,7 +48,7 @@ const App = () => {
           <Route
             path="/about"
             element={
-              <div className="container mx-auto px-4 py-8 pb-36 dark:bg-gray-700">
+              <div className="container mx-auto px-4 py-8 pb-36">
                 <About />
               </div>
             }
@@ -56,7 +56,7 @@ const App = () => {
           <Route
             path="/services"
             element={
-              <div className="container mx-auto px-4 py-8 pb-36 dark:bg-gray-700">
+              <div className="container mx-auto px-4 py-8 pb-36">
                 <ServicesPage />
               </div>
             }
@@ -64,7 +64,7 @@ const App = () => {
           <Route
             path="/portfolio"
             element={
-              <div className="container mx-auto px-4 py-8 pb-36 dark:bg-gray-700">
+              <div className="container mx-auto px-4 py-8 pb-36">
                 <PortfolioPage />
               </div>
             }
@@ -72,7 +72,7 @@ const App = () => {
           <Route
             path="/contact"
             element={
-              <div className="container mx-auto px-4 py-8 pb-36 dark:bg-gray-700">
+              <div className="container mx-auto px-4 py-8 pb-36">
                 <Contact />
               </div>
             }

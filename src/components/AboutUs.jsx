@@ -40,7 +40,7 @@ const TeamMember = ({ name, role, image }) => (
 
 const AboutUs = () => {
   return (
-    <div className="light:bg-gradient-to-r from-green-400 to-blue-500 dark:bg-gray-700 py-12 font-sans relative max-md:top-32 md:top-50 top-36 min-h-screen">
+    <div className="py-12 font-sans relative max-md:top-32 md:top-50 top-36 min-h-screen">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center">
         <div className="lg:w-1/2 p-4">
           <h2 className="text-5xl font-bold text-gray-800 dark:text-white mb-6">
@@ -66,7 +66,7 @@ const AboutUs = () => {
             menjadi pemimpin di industri Anda dengan memanfaatkan solusi
             teknologi yang kami tawarkan.
           </p>
-          <div className="text-center mb-10 text-justify">
+          <div className="text-justify mb-10">
             <h4 className="text-6xl font-bold text-cyan-600">95%</h4>
             <p className="text-lg text-gray-600 dark:text-gray-300">
               Pertumbuhan Digital yang Dicapai
@@ -108,7 +108,7 @@ const AboutUs = () => {
       {/* End Key Statistics Section */}
 
       {/* Start Team Area */}
-      <div className="team-style-one-area light:bg-gradient-to-r from-green-400 to-blue-500 dark:bg-gray-700 p-12 md:p-16 lg:p-24">
+      <div className="team-style-one-area p-12 md:p-16 lg:p-24">
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="title text-4xl font-bold text-gray-900 dark:text-white">

@@ -41,7 +41,7 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <div className="dark:bg-gray-700 py-10 relative max-md:top-32 md:top-50 top-36">
+    <div className="py-10 relative max-md:top-32 md:top-50 top-36">
       <div className="container mx-auto">
         <h1 className="text-5xl font-bold text-center mb-8 text-gray-800 dark:text-white">
           Portofolio Kami

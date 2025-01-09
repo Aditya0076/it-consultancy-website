@@ -58,7 +58,10 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
             className="h-10 md:h-12 mr-3 rounded-full"
             alt="Syntax Threads Generation Logo"
           />
-          <span className="self-center text-lg md:text-xl font-semibold whitespace-nowrap dark:text-white">
+          <span
+            className={`self-center text-lg md:text-xl font-semibold whitespace-nowrap ${
+              isScrolling ? "text-gray-900 dark:text-white" : "text-white"
+            }`}>
             Syntax Threads Generation
           </span>
         </NavLink>

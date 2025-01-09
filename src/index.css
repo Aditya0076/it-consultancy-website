@@ -4,6 +4,6 @@
 @tailwind utilities;
 
 div#root {
-  background-color: black;
+  /* background-color: black; */
   height: 100vh;
 }
