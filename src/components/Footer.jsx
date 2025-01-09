@@ -5,6 +5,55 @@ import Github from "./microComponents/icons/Github";
 import Twitter from "./microComponents/icons/Twitter";
 
 const FooterComponent = () => {
+  const followUs = [
+    {
+      text: "Github",
+      link: "https://github.com/syntaxthreads",
+    },
+    {
+      text: "Twitter",
+      link: "https://twitter.com/syntaxthreads",
+    },
+    {
+      text: "Instagram",
+      link: "https://www.instagram.com/syntaxthreads/",
+    },
+
+    {
+      text: "LinkedIn",
+      link: "https://www.linkedin.com/company/syntaxthreads/",
+    },
+  ];
+
+  const resources = [
+    {
+      text: "About",
+      link: "/about",
+    },
+    {
+      text: "Services",
+      link: "/services",
+    },
+    {
+      text: "Portfolio",
+      link: "/portfolio",
+    },
+    {
+      text: "Contact",
+      link: "/contact",
+    },
+  ];
+
+  const legal = [
+    {
+      text: "Privacy Policy",
+      link: "/privacy-policy",
+    },
+    {
+      text: "Terms & Conditions",
+      link: "/terms-and-conditions",
+    },
+  ];
   return (
     <footer className="bg-white dark:bg-gray-900 relative max-md:top-32 md:top-50 top-36">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -27,34 +76,15 @@ const FooterComponent = () => {
                 Resources
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a
-                    href="/about"
-                    className="hover:underline text-gray-900 dark:text-white">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/services"
-                    className="hover:underline text-gray-900 dark:text-white">
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/portfolio"
-                    className="hover:underline text-gray-900 dark:text-white">
-                    Portfolio
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/contact"
-                    className="hover:underline text-gray-900 dark:text-white">
-                    Contact
-                  </a>
-                </li>
+                {resources.map((item, index) => (
+                  <li key={index} className={index === 0 ? "mb-4" : ""}>
+                    <a
+                      href={item.link}
+                      className="hover:underline text-gray-900 dark:text-white">
+                      {item.text}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
@@ -62,34 +92,15 @@ const FooterComponent = () => {
                 Follow us
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a
-                    href="#"
-                    className="hover:underline text-gray-900 dark:text-white">
-                    GitHub
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:underline text-gray-900 dark:text-white">
-                    Twitter
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:underline text-gray-900 dark:text-white">
-                    Instagram
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:underline text-gray-900 dark:text-white">
-                    LinkedIn
-                  </a>
-                </li>
+                {followUs.map((item, index) => (
+                  <li key={index} className={index === 0 ? "mb-4" : ""}>
+                    <a
+                      href={item.link}
+                      className="hover:underline text-gray-900 dark:text-white">
+                      {item.text}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
@@ -97,20 +108,15 @@ const FooterComponent = () => {
                 Legal
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
-                <li className="mb-4">
-                  <a
-                    href="#"
-                    className="hover:underline text-gray-900 dark:text-white">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="hover:underline text-gray-900 dark:text-white">
-                    Terms & Conditions
-                  </a>
-                </li>
+                {legal.map((item, index) => (
+                  <li key={index} className={index === 0 ? "mb-4" : ""}>
+                    <a
+                      href={item.link}
+                      className="hover:underline text-gray-900 dark:text-white">
+                      {item.text}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
