@@ -1,4 +1,3 @@
-import React from "react";
 import { Card } from "flowbite-react";
 
 const services = [
@@ -86,14 +85,13 @@ const Service = () => {
         <h1 className="text-5xl font-bold text-center mb-8 text-gray-800 dark:text-white">
           Apa yang Kami Lakukan
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
           {services.map((service) => (
             <Card
               key={service.id}
               className="max-w-md mx-auto transition-transform transform hover:scale-105 shadow-lg rounded-lg bg-white dark:bg-gray-800"
               imgAlt={service.title}
-              imgSrc={service.image}
-            >
+              imgSrc={service.image}>
               <div className="p-6 flex flex-col h-full">
                 <a href="#">
                   <h5 className="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white mb-2">
@@ -113,14 +111,12 @@ const Service = () => {
                   {service.content.list.map((item, index) => (
                     <li
                       key={index}
-                      className="flex items-center mb-2 text-lg text-gray-600 dark:text-gray-400"
-                    >
+                      className="flex items-center mb-2 text-lg text-gray-600 dark:text-gray-400">
                       <svg
                         className="h-5 w-5 text-green-500 mr-2"
                         fill="currentColor"
                         viewBox="0 0 20 20"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
+                        xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.629 12.133l-3.5-3.5a1 1 0 00-1.415 1.415l4.5 4.5a1 1 0 001.415 0l10-10a1 1 0 00-1.415-1.415l-9.293 9.293z" />
                       </svg>
                       <span className="ml-2">{item}</span>
@@ -129,8 +125,7 @@ const Service = () => {
                 </ul>
                 <a
                   href="#"
-                  className="mt-auto block w-full rounded-lg bg-cyan-700 px-6 py-3 text-center text-lg font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
-                >
+                  className="mt-auto block w-full rounded-lg bg-cyan-700 px-6 py-3 text-center text-lg font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800">
                   Lihat Detail
                 </a>
               </div>
@@ -140,6 +135,6 @@ const Service = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Service;
