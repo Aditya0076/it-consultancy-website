@@ -54,13 +54,15 @@ const HeroSection = ({ isDarkMode }) => {
   return (
     <>
       <div className={`h-screen w-full flex items-center relative text-white`}>
-        <div className="container mx-auto flex flex-col lg:flex-row items-center relative z-10">
+        <div className="container mx-auto flex flex-col lg:flex-row items-center relative z-10 gap-6">
           <div className="text-center lg:text-left lg:w-1/2">
-            <h4 className="text-xl font-semibold">MEMPERDAYAKAN BISNIS ANDA</h4>
-            <h2 className="text-6xl font-bold mt-2">
+            <h4 className="text-xl max-md:text-base font-semibold">
+              MEMPERDAYAKAN BISNIS ANDA
+            </h4>
+            <h2 className="text-6xl max-md:text-3xl font-bold mt-2">
               Solusi Web & Mobile Inovatif
             </h2>
-            <p className="mt-4 text-lg leading-relaxed">
+            <p className="mt-4 text-lg max-md:text-sm leading-relaxed">
               Ubah ide Anda menjadi solusi digital yang kuat dengan layanan
               pengembangan web dan mobile kami yang canggih. Kami menyediakan
               layanan pembuatan web dan mobile yang sesuai dengan kebutuhan
@@ -74,13 +76,13 @@ const HeroSection = ({ isDarkMode }) => {
                 <Button
                   className={`bg-${isDarkMode ? "dark" : "white"} text-${
                     isDarkMode ? "white" : "blue-500"
-                  } font-semibold`}>
+                  } font-semibold max-md:text-base`}>
                   Lihat Proyek Kami
                 </Button>
               </Link>
             </div>
           </div>
-          <div className="lg:w-1/2 mt-6 lg:mt-0">
+          <div className="lg:w-1/2 mt-6 lg:mt-0 max-md:w-3/4">
             <div className="relative">
               <img
                 src={projects[currentIndex].image}

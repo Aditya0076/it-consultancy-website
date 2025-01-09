@@ -20,7 +20,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
       to: "/services",
     },
     {
-      text: "Portfolio",
+      text: "Porto",
       to: "/portfolio",
     },
     {
@@ -46,8 +46,8 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
     <nav
       className={`${
         isScrolling
-          ? `bg-white border-b-2 border-gray-200 dark:bg-gray-900 `
-          : "bg-transparent"
+          ? `bg-white border-b-2 border-gray-200 dark:bg-gray-900`
+          : "bg-transparent max-md:dark:bg-gray-900 max-md:bg-white"
       } fixed z-50 w-screen`}>
       <div className="max-w-screen-xl flex md:flex-wrap gap-6 items-center justify-between mx-auto p-8">
         <NavLink
@@ -60,7 +60,9 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
           />
           <span
             className={`self-center text-lg md:text-xl font-semibold whitespace-nowrap ${
-              isScrolling ? "text-gray-900 dark:text-white" : "text-white"
+              isScrolling
+                ? "text-gray-900 dark:text-white"
+                : "text-white max-md:text-gray-900 max-md:dark:text-white"
             }`}>
             Syntax Threads Generation
           </span>
@@ -93,13 +95,15 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
             isOpen ? "block" : "hidden"
           } w-full md:block md:w-auto max-md:absolute max-md:right-0 max-md:top-28 max-md:z-50`}
           id="navbar-multi-level">
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+          <ul className="flex flex-col font-medium p-4 md:p-0 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 max-md:dark:bg-gray-900 max-md:bg-white">
             {navigations.map((navigation) => (
               <li key={navigation.text}>
                 <NavLink
                   to={navigation.to}
                   className={`block py-3 px-4 text-lg rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ${
-                    isScrolling ? "text-gray-900 dark:text-white" : "text-white"
+                    isScrolling
+                      ? "text-gray-900 dark:text-white"
+                      : "text-white max-md:text-gray-900 max-md:dark:text-white"
                   } md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>
                   {navigation.text}
                 </NavLink>
@@ -109,7 +113,9 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
               <button
                 onClick={toggleDarkMode}
                 className={`flex items-center py-3 px-4 text-lg rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${
-                  isScrolling ? "text-gray-900 dark:text-white" : "text-white"
+                  isScrolling
+                    ? "text-gray-900 dark:text-white"
+                    : "text-white max-md:text-gray-900 max-md:dark:text-white"
                 }`}>
                 {isDarkMode ? (
                   <svg

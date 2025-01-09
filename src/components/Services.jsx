@@ -89,9 +89,12 @@ const Service = () => {
           {services.map((service) => (
             <Card
               key={service.id}
-              className="max-w-md mx-auto transition-transform transform hover:scale-105 shadow-lg rounded-lg bg-white dark:bg-gray-800"
-              imgAlt={service.title}
-              imgSrc={service.image}>
+              className="max-w-md mx-auto transition-transform transform hover:scale-105 shadow-lg rounded-lg bg-white dark:bg-gray-800">
+              <img
+                src={service.image}
+                className="rounded-t-lg h-[300px] w-full object-cover"
+                alt={service.title}
+              />
               <div className="p-6 flex flex-col h-full">
                 <a href="#">
                   <h5 className="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white mb-2">
