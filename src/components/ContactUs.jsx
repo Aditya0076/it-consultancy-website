@@ -3,7 +3,7 @@ import { FaPhone, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 
 const ContactUs = () => {
   return (
-    <section className="py-20 ">
+    <section className="py-20 relative max-md:top-32 md:top-50 top-36">
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white text-center">
           Contact Information

@@ -1,4 +1,3 @@
-import React from "react";
 import { Card } from "flowbite-react";
 
 const TeamMember = ({ name, role, image }) => (
@@ -12,8 +11,7 @@ const TeamMember = ({ name, role, image }) => (
       <h4 className="text-3xl font-semibold text-gray-800 dark:text-white mb-1">
         <a
           href="team-details.html"
-          className="hover:text-cyan-600 transition-colors duration-200"
-        >
+          className="hover:text-cyan-600 transition-colors duration-200">
           {name}
         </a>
       </h4>
@@ -23,16 +21,14 @@ const TeamMember = ({ name, role, image }) => (
           <li className="facebook">
             <a
               href="#"
-              className="text-blue-600 hover:text-blue-800 transition-colors duration-200"
-            >
+              className="text-blue-600 hover:text-blue-800 transition-colors duration-200">
               <i className="fab fa-facebook-f"></i>
             </a>
           </li>
           <li className="twitter">
             <a
               href="#"
-              className="text-blue-400 hover:text-blue-600 transition-colors duration-200"
-            >
+              className="text-blue-400 hover:text-blue-600 transition-colors duration-200">
               <i className="fab fa-twitter"></i>
             </a>
           </li>
@@ -44,7 +40,7 @@ const TeamMember = ({ name, role, image }) => (
 
 const AboutUs = () => {
   return (
-    <div className="light:bg-gradient-to-r from-green-400 to-blue-500 dark:bg-gray-700 py-12 font-sans">
+    <div className="light:bg-gradient-to-r from-green-400 to-blue-500 dark:bg-gray-700 py-12 font-sans relative max-md:top-32 md:top-50 top-36 min-h-screen">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center">
         <div className="lg:w-1/2 p-4">
           <h2 className="text-5xl font-bold text-gray-800 dark:text-white mb-6">

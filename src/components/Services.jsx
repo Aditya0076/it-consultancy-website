@@ -80,7 +80,7 @@ const services = [
 
 const Service = () => {
   return (
-    <div className="light:bg-gradient-to-r from-green-400 to-blue-500 dark:bg-gray-700 py-10 rounded-md w-full">
+    <div className="light:bg-gradient-to-r from-green-400 to-blue-500 dark:bg-gray-700 py-10 rounded-md w-full relative max-md:top-32 md:top-50 top-36 min-h-screen">
       <div className="container mx-auto">
         <h1 className="text-5xl font-bold text-center mb-8 text-gray-800 dark:text-white">
           Apa yang Kami Lakukan

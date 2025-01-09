@@ -40,20 +40,46 @@ const App = () => {
       </Helmet>
       <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       <main
-        className={`min-h-screen relative max-md:top-32 md:top-50 top-36 ${
+        className={`min-h-screen ${
           isDarkMode
             ? "bg-gray-700"
             : "bg-gradient-to-r from-green-400 to-blue-500"
         } transition-colors duration-300`}>
-        <div className="container mx-auto px-4 py-8">
-          <Routes>
-            <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/portfolio" element={<PortfolioPage />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Home isDarkMode={isDarkMode} />} />
+          <Route
+            path="/about"
+            element={
+              <div className="container mx-auto px-4 py-8 pb-36 dark:bg-gray-700">
+                <About />
+              </div>
+            }
+          />
+          <Route
+            path="/services"
+            element={
+              <div className="container mx-auto px-4 py-8 pb-36 dark:bg-gray-700">
+                <ServicesPage />
+              </div>
+            }
+          />
+          <Route
+            path="/portfolio"
+            element={
+              <div className="container mx-auto px-4 py-8 pb-36 dark:bg-gray-700">
+                <PortfolioPage />
+              </div>
+            }
+          />
+          <Route
+            path="/contact"
+            element={
+              <div className="container mx-auto px-4 py-8 pb-36 dark:bg-gray-700">
+                <Contact />
+              </div>
+            }
+          />
+        </Routes>
       </main>
       <FooterComponent />
     </Router>
