@@ -1,5 +1,5 @@
 // src/App.js
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
@@ -32,10 +32,19 @@ const App = () => {
     <Router>
       <Helmet>
         <title>Syntax Threads Generation</title>
-        <link rel="icon" type="image/png" href="/assets/superai-image-1735128080093.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          href="/assets/superai-image-1735128080093.png"
+        />
       </Helmet>
       <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
-      <main className={`min-h-screen ${isDarkMode ? 'bg-gray-700' : 'bg-gradient-to-r from-green-400 to-blue-500'} transition-colors duration-300`}>
+      <main
+        className={`min-h-screen relative max-md:top-32 md:top-50 top-36 ${
+          isDarkMode
+            ? "bg-gray-700"
+            : "bg-gradient-to-r from-green-400 to-blue-500"
+        } transition-colors duration-300`}>
         <div className="container mx-auto px-4 py-8">
           <Routes>
             <Route path="/" element={<Home isDarkMode={isDarkMode} />} />

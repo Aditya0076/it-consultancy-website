@@ -10,7 +10,8 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
   };
 
   return (
-    <nav className={`bg-white border-b-2 border-gray-200 dark:bg-gray-900`}>
+    <nav
+      className={`bg-white border-b-2 border-gray-200 dark:bg-gray-900 fixed z-50 w-screen`}>
       <div className="max-w-screen-xl flex md:flex-wrap gap-6 items-center justify-between mx-auto p-8">
         <NavLink
           to="/"
