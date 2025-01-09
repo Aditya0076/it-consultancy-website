@@ -1,5 +1,3 @@
-// src/components/ContactUs.js
-import React from "react";
 import { Card } from "flowbite-react";
 import { FaPhone, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
 
@@ -59,14 +57,13 @@ const ContactUs = () => {
               <div className="mb-4">
                 <label
                   htmlFor="name"
-                  className="block text-lg font-bold mb-2 text-gray-900 dark:text-white"
-                >
+                  className="block text-lg font-bold mb-2 text-gray-900 dark:text-white">
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:text-white"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:placeholder:text-neutral-300 dark:bg-gray-600 dark:border-gray-500 dark:text-white"
                   placeholder="Your Name"
                   required
                 />
@@ -74,14 +71,13 @@ const ContactUs = () => {
               <div className="mb-4">
                 <label
                   htmlFor="email"
-                  className="block text-lg font-bold mb-2 text-gray-900 dark:text-white"
-                >
+                  className="block text-lg font-bold mb-2 text-gray-900 dark:text-white">
                   Your Email
                 </label>
                 <input
                   type="email"
                   id="email"
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:text-white"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:placeholder:text-neutral-300 dark:bg-gray-600 dark:border-gray-500 dark:text-white"
                   placeholder="name@flowbite.com"
                   required
                 />
@@ -89,8 +85,7 @@ const ContactUs = () => {
                   We’ll never share your details. Read our{" "}
                   <a
                     href="#"
-                    className="font-medium text-blue-600 hover:underline dark:text-blue-500"
-                  >
+                    className="font-medium text-blue-600 hover:underline dark:text-blue-500">
                     Privacy Policy
                   </a>
                   .
@@ -99,17 +94,15 @@ const ContactUs = () => {
               <div className="mb-4">
                 <label
                   htmlFor="message"
-                  className="block text-lg font-bold mb-2 text-gray-900 dark:text-white"
-                >
+                  className="block text-lg font-bold mb-2 text-gray-900 dark:text-white">
                   Message
                 </label>
                 <textarea
                   id="message"
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:text-white"
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:placeholder:text-neutral-300 dark:bg-gray-600 dark:border-gray-500 dark:text-white"
                   rows="4"
                   placeholder="Your Message"
-                  required
-                ></textarea>
+                  required></textarea>
               </div>
               <button
                 type="submit"
@@ -120,10 +113,13 @@ const ContactUs = () => {
                   const email = document.getElementById("email").value;
                   const message = document.getElementById("message").value;
                   const subject = "Contact Form Submission";
-                  const mailto = `mailto:syntaxthreads1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+                  const mailto = `mailto:syntaxthreads1@gmail.com?subject=${encodeURIComponent(
+                    subject
+                  )}&body=${encodeURIComponent(
+                    `Name: ${name}\nEmail: ${email}\n\n${message}`
+                  )}`;
                   window.location.href = mailto;
-                }}
-              >
+                }}>
                 Submit
               </button>
             </form>
