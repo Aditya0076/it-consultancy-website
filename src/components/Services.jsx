@@ -113,7 +113,7 @@ const Service = () => {
                       key={index}
                       className="flex items-center mb-2 text-lg text-gray-600 dark:text-gray-400">
                       <svg
-                        className="h-5 w-5 text-green-500 mr-2"
+                        className="h-5 w-5 text-green-500 mr-2 flex-shrink-0"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
