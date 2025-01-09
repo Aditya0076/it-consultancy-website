@@ -55,9 +55,7 @@ const App = () => {
           </Routes>
         </div>
       </main>
-      <section className=" relative max-md:top-32 md:top-50 top-36">
-        <FooterComponent />
-      </section>
+      <FooterComponent />
     </Router>
   );
 };
