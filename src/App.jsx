@@ -41,9 +41,7 @@ const App = () => {
       <Header toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       <main
         className={`min-h-screen ${
-          isDarkMode
-            ? "bg-gray-700"
-            : "bg-gradient-to-r from-green-400 to-blue-500"
+          isDarkMode ? "bg-darkCustomGradient" : "bg-lightCustomGradient"
         } transition-colors duration-300`}>
         <Routes>
           <Route path="/" element={<Home isDarkMode={isDarkMode} />} />

@@ -6,10 +6,12 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        customGradient: `
-          linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%),
+        darkCustomGradient: `
+          linear-gradient(to bottom, #374151 0%, rgba(0,0,0,0.15) 100%),
           radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%)
         `,
+        lightCustomGradient:
+          "linear-gradient(315deg, #2af598 0%, #009efd 100%)",
       },
       backgroundBlendMode: {
         multiply: "multiply",

@@ -4,21 +4,58 @@ import { NavLink } from "react-router-dom";
 
 const Header = ({ toggleDarkMode, isDarkMode }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  const navigations = [
+    {
+      text: "Beranda",
+      to: "/",
+    },
+    {
+      text: "Tentang",
+      to: "/about",
+    },
+    {
+      text: "Layanan",
+      to: "/services",
+    },
+    {
+      text: "Portfolio",
+      to: "/portfolio",
+    },
+    {
+      text: "Kontak",
+      to: "/contact",
+    },
+  ];
+  const handleScroll = () => {
+    if (window.scrollY > 30) {
+      setIsScrolling(true);
+    } else {
+      setIsScrolling(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll);
 
   const toggleNavbar = () => {
-    setIsOpen((prev) => !prev); // Toggle the state
+    setIsOpen((prev) => !prev);
   };
 
   return (
     <nav
-      className={`bg-white border-b-2 border-gray-200 dark:bg-gray-900 fixed z-50 w-screen`}>
+      className={`${
+        isScrolling
+          ? `bg-white border-b-2 border-gray-200 dark:bg-gray-900 `
+          : "bg-transparent"
+      } fixed z-50 w-screen`}>
       <div className="max-w-screen-xl flex md:flex-wrap gap-6 items-center justify-between mx-auto p-8">
         <NavLink
           to="/"
           className="flex items-center justify-center w-full md:w-auto">
           <img
             src="/assets/superai-image-1735128080093.png"
-            className="h-16 md:h-20 mr-3 rounded-full"
+            className="h-10 md:h-12 mr-3 rounded-full"
             alt="Syntax Threads Generation Logo"
           />
           <span className="self-center text-lg md:text-xl font-semibold whitespace-nowrap dark:text-white">
@@ -51,48 +88,26 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } w-full md:block md:w-auto max-md:absolute max-md:right-0 max-md:top-28 max-md:z-50`} // Toggle visibility based on isOpen
+          } w-full md:block md:w-auto max-md:absolute max-md:right-0 max-md:top-28 max-md:z-50`}
           id="navbar-multi-level">
-          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-            <li>
-              <NavLink
-                to="/" // Home link pointing to root
-                className="block py-3 px-4 text-lg text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                Beranda
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/about"
-                className="block py-3 px-4 text-lg text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                Tentang
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/services"
-                className="block py-3 px-4 text-lg text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                Layanan
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/portfolio"
-                className="block py-3 px-4 text-lg text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                Portofolio
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/contact"
-                className="block py-3 px-4 text-lg text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
-                Kontak
-              </NavLink>
-            </li>
+          <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
+            {navigations.map((navigation) => (
+              <li key={navigation.text}>
+                <NavLink
+                  to={navigation.to}
+                  className={`block py-3 px-4 text-lg rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ${
+                    isScrolling ? "text-gray-900 dark:text-white" : "text-white"
+                  } md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>
+                  {navigation.text}
+                </NavLink>
+              </li>
+            ))}
             <li>
               <button
                 onClick={toggleDarkMode}
-                className="flex items-center py-3 px-4 text-lg text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+                className={`flex items-center py-3 px-4 text-lg rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${
+                  isScrolling ? "text-gray-900 dark:text-white" : "text-white"
+                }`}>
                 {isDarkMode ? (
                   <svg
                     aria-hidden="true"
