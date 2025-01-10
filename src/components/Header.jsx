@@ -1,8 +1,10 @@
 // src/components/Header.js
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Header = ({ toggleDarkMode, isDarkMode }) => {
+  const location = useLocation();
+  console.log("Location terkini:", location.pathname);
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
 
@@ -20,7 +22,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
       to: "/services",
     },
     {
-      text: "portofolio",
+      text: "Portofolio",
       to: "/portfolio",
     },
     {
@@ -41,7 +43,6 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
   const toggleNavbar = () => {
     setIsOpen((prev) => !prev);
   };
-
   return (
     <nav
       className={`${
@@ -104,7 +105,9 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
                     isScrolling
                       ? "text-gray-900 dark:text-white"
                       : "text-white max-md:text-gray-900 max-md:dark:text-white"
-                  } md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>
+                  } md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${
+                    location.pathname === navigation.to ? "underline" : ""
+                  }`}>
                   {navigation.text}
                 </NavLink>
               </li>

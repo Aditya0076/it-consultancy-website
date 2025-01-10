@@ -3,7 +3,7 @@ const TeamMember = ({ name, role, image }) => (
     <img
       src={image}
       alt={`${name} - Gambar tidak ditemukan`}
-      className="w-24 h-24 object-cover mb-4 mx-auto rounded-full"
+      className="w-24 h-24 object-cover object-top mb-4 mx-auto rounded-full"
     />
     <h4 className="text-xl font-semibold text-gray-800 dark:text-white">
       <a
@@ -38,9 +38,8 @@ const AboutUs = () => {
   const developers = [
     {
       name: "Moh Solehuddin",
-      role: "Fullstack Developer",
-      image:
-        "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
+      role: "Frontend Developer",
+      image: "/assets/img/developers/MohSolehuddin_frontend.jpeg",
     },
     {
       name: "Aditya Bayu Prabowo",
@@ -48,24 +47,24 @@ const AboutUs = () => {
       image:
         "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
     },
-    {
-      name: "Zainu Firdaus",
-      role: "Frontend Developer",
-      image:
-        "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
-    },
-    {
-      name: "Ikbal",
-      role: "Backend Developer",
-      image:
-        "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
-    },
-    {
-      name: "Mirza",
-      role: "Backend Developer",
-      image:
-        "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
-    },
+    // {
+    //   name: "Zainu Firdaus",
+    //   role: "Frontend Developer",
+    //   image:
+    //     "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
+    // },
+    // {
+    //   name: "Ikbal",
+    //   role: "Backend Developer",
+    //   image:
+    //     "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
+    // },
+    // {
+    //   name: "Mirza",
+    //   role: "Backend Developer",
+    //   image:
+    //     "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
+    // },
   ];
   return (
     <div className="py-12 font-sans relative max-md:top-32 md:top-50 top-36 min-h-screen">
@@ -120,7 +119,7 @@ const AboutUs = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-12">
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-12">
             {developers.map((developer, index) => (
               <TeamMember
                 key={index}

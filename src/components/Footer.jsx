@@ -17,30 +17,30 @@ const FooterComponent = () => {
 
   const resources = [
     {
-      text: "About",
+      text: "Tentang",
       link: "/about",
     },
     {
-      text: "Services",
+      text: "Layanan",
       link: "/services",
     },
     {
-      text: "Portfolio",
+      text: "Portofolio",
       link: "/portfolio",
     },
     {
-      text: "Contact",
+      text: "Kontak",
       link: "/contact",
     },
   ];
 
   const legal = [
     {
-      text: "Privacy Policy",
+      text: "Kebijakan Privasi",
       link: "/privacy-policy",
     },
     {
-      text: "Terms & Conditions",
+      text: "Syarat & Ketentuan",
       link: "/terms-and-conditions",
     },
   ];
@@ -63,7 +63,7 @@ const FooterComponent = () => {
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Resources
+                Sumber Daya
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 {resources.map((item, index) => (
@@ -79,7 +79,7 @@ const FooterComponent = () => {
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Follow us
+                Ikuti Kami
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 {followUs.map((item, index) => (
@@ -96,7 +96,7 @@ const FooterComponent = () => {
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Legal
+                Hukum
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 {legal.map((item, index) => (

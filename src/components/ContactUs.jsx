@@ -6,19 +6,19 @@ const ContactUs = () => {
     <section className="py-20 relative max-md:top-32 md:top-50 top-36">
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold mb-8 text-gray-900 dark:text-white text-center">
-          Contact Information
+          Informasi Kontak
         </h2>
 
         <div className="flex flex-col lg:flex-row justify-between space-y-4 lg:space-y-0 lg:space-x-4">
           <Card className="flex-1 bg-white dark:bg-gray-900 shadow-md p-6">
             <h5 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
-              Get in Touch
+              Hubungi Kami Di
             </h5>
             <div className="flex items-center mb-4">
               <FaPhone className="text-purple-500 mr-3 h-7 w-7" />
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Hotline
+                  Telepon
                 </h3>
                 <p className="text-lg text-gray-700 dark:text-gray-300">
                   088227661015
@@ -29,7 +29,7 @@ const ContactUs = () => {
               <FaMapMarkerAlt className="text-orange-500 mr-3 h-7 w-7" />
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Our Location
+                  Lokasi Kami
                 </h3>
                 <p className="text-lg text-gray-700 dark:text-gray-300">
                   Jl. Topaz No 7, Tlogomas, Lowokwaru, Kota Malang
@@ -40,7 +40,7 @@ const ContactUs = () => {
               <FaEnvelope className="text-green-500 mr-3 h-7 w-7" />
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Official Email
+                  Email Kami
                 </h3>
                 <p className="text-lg text-gray-700 dark:text-gray-300">
                   Syntaxthreads1@gmail.com
@@ -51,20 +51,20 @@ const ContactUs = () => {
 
           <Card className="flex-1 bg-white dark:bg-gray-900 p-8 rounded-lg shadow-md">
             <h2 className="text-3xl font-bold mb-8 text-gray-900 dark:text-white text-center">
-              Have Questions?
+              Punya Pertanyaan ?
             </h2>
             <form>
               <div className="mb-4">
                 <label
                   htmlFor="name"
                   className="block text-lg font-bold mb-2 text-gray-900 dark:text-white">
-                  Name
+                  Nama
                 </label>
                 <input
                   type="text"
                   id="name"
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:placeholder:text-neutral-300 dark:bg-gray-600 dark:border-gray-500 dark:text-white"
-                  placeholder="Your Name"
+                  placeholder="Nama Lengkap"
                   required
                 />
               </div>
@@ -72,21 +72,21 @@ const ContactUs = () => {
                 <label
                   htmlFor="email"
                   className="block text-lg font-bold mb-2 text-gray-900 dark:text-white">
-                  Your Email
+                  Email
                 </label>
                 <input
                   type="email"
                   id="email"
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:placeholder:text-neutral-300 dark:bg-gray-600 dark:border-gray-500 dark:text-white"
-                  placeholder="name@flowbite.com"
+                  placeholder="name@gmail.com"
                   required
                 />
                 <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                  We’ll never share your details. Read our{" "}
+                  Kami tidak akan pernah membagikan detail Anda. Baca{" "}
                   <a
-                    href="#"
+                    href="/privacy-policy"
                     className="font-medium text-blue-600 hover:underline dark:text-blue-500">
-                    Privacy Policy
+                    Kebijakan Privasi Kami
                   </a>
                   .
                 </p>
@@ -95,13 +95,13 @@ const ContactUs = () => {
                 <label
                   htmlFor="message"
                   className="block text-lg font-bold mb-2 text-gray-900 dark:text-white">
-                  Message
+                  Pesan
                 </label>
                 <textarea
                   id="message"
                   className="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:placeholder:text-neutral-300 dark:bg-gray-600 dark:border-gray-500 dark:text-white"
                   rows="4"
-                  placeholder="Your Message"
+                  placeholder="Ketikan sesuatu..."
                   required></textarea>
               </div>
               <button
@@ -120,7 +120,7 @@ const ContactUs = () => {
                   )}`;
                   window.location.href = mailto;
                 }}>
-                Submit
+                Kirim
               </button>
             </form>
           </Card>
