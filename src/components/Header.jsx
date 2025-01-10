@@ -54,7 +54,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
           to="/"
           className="flex items-center justify-center w-full md:w-auto">
           <img
-            src="/assets/superai-image-1735128080093.png"
+            src="./assets/superai-image-1735128080093.png"
             className="h-10 md:h-12 mr-3 rounded-full"
             alt="Syntax Threads Generation Logo"
           />
