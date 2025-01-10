@@ -20,7 +20,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
       to: "/services",
     },
     {
-      text: "Porto",
+      text: "portofolio",
       to: "/portfolio",
     },
     {
