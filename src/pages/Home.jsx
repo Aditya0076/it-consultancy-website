@@ -1,11 +1,7 @@
 import HeroSection from "../components/HeroSection";
 
 const Home = ({ isDarkMode }) => {
-  return (
-    <div>
-      <HeroSection isDarkMode={isDarkMode} />
-    </div>
-  );
+  return <HeroSection isDarkMode={isDarkMode} />;
 };
 
 export default Home;
