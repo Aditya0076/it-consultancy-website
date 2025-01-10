@@ -39,12 +39,12 @@ const projects = [
     image: "../../assets/resourceImage/6.png",
     link: "https://risharchery.com/",
   },
-  {
-    title: "Msytc",
-    description: "Portofolio",
-    image: "../../assets/resourceImage/4.png",
-    link: "https://risharchery.com/",
-  },
+  // {
+  //   title: "Msytc",
+  //   description: "Portofolio",
+  //   image: "../../assets/resourceImage/4.png",
+  //   link: "https://risharchery.com/",
+  // },
 ];
 
 const Portfolio = () => {
@@ -74,14 +74,16 @@ const Portfolio = () => {
           Portofolio Kami
         </h1>
         <section className="flex justify-center gap-6 items-center">
-          <button
-            onClick={prevPage}
-            disabled={currentPage === 0}
-            className={`text-9xl ${
-              currentPage === 0 ? "text-gray-500" : "text-white"
-            } transition-all`}>
-            <IoChevronBack />
-          </button>
+          {projects.length > 6 && (
+            <button
+              onClick={prevPage}
+              disabled={currentPage === 0}
+              className={`text-9xl ${
+                currentPage === 0 ? "text-gray-500" : "text-white"
+              } transition-all`}>
+              <IoChevronBack />
+            </button>
+          )}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {currentProjects.map((project, index) => (
@@ -109,18 +111,20 @@ const Portfolio = () => {
             ))}
           </div>
 
-          <button
-            onClick={nextPage}
-            disabled={
-              currentPage >= Math.ceil(projects.length / itemsPerPage) - 1
-            }
-            className={`text-9xl ${
-              currentPage >= Math.ceil(projects.length / itemsPerPage) - 1
-                ? "text-gray-500"
-                : "text-white"
-            } transition-all`}>
-            <IoChevronForward />
-          </button>
+          {projects.length > 6 && (
+            <button
+              onClick={nextPage}
+              disabled={
+                currentPage >= Math.ceil(projects.length / itemsPerPage) - 1
+              }
+              className={`text-9xl ${
+                currentPage >= Math.ceil(projects.length / itemsPerPage) - 1
+                  ? "text-gray-500"
+                  : "text-white"
+              } transition-all`}>
+              <IoChevronForward />
+            </button>
+          )}
         </section>
       </div>
     </div>

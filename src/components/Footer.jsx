@@ -1,27 +1,17 @@
+import { FaLinkedin, FaSquareInstagram } from "react-icons/fa6";
 import Copyright from "./microComponents/icons/copyright/Copyright";
-import Discord from "./microComponents/icons/Dishcord";
-import Facebook from "./microComponents/icons/Facebook";
-import Github from "./microComponents/icons/Github";
-import Twitter from "./microComponents/icons/Twitter";
+import PureContainerIcon from "./microComponents/icons/PureContainerIcon";
 
 const FooterComponent = () => {
   const followUs = [
-    // {
-    //   text: "Github",
-    //   link: "https://github.com/syntaxthreads",
-    // },
-    // {
-    //   text: "Twitter",
-    //   link: "https://twitter.com/syntaxthreads",
-    // },
     {
       text: "Instagram",
-      link: "https://www.instagram.com/syntaxthreads/",
+      link: "https://www.instagram.com/syntaxthreads_official",
     },
 
     {
       text: "LinkedIn",
-      link: "https://www.linkedin.com/company/syntaxthreads/",
+      link: "https://www.linkedin.com/in/syntax-threads-697a52345/",
     },
   ];
 
@@ -96,6 +86,7 @@ const FooterComponent = () => {
                   <li key={index} className={index === 0 ? "mb-4" : ""}>
                     <a
                       href={item.link}
+                      target="_blank"
                       className="hover:underline text-gray-900 dark:text-white">
                       {item.text}
                     </a>
@@ -125,10 +116,14 @@ const FooterComponent = () => {
         <div className="sm:flex sm:items-center sm:justify-between">
           <Copyright />
           <div className="flex mt-4 sm:justify-center sm:mt-0">
-            <Facebook link="https://www.facebook.com/syntaxthreads" />
-            <Discord link="https://discord.com/invite/9m9qZj7" />
-            <Twitter link="https://twitter.com/syntaxthreads" />
-            <Github link="https://github.com/syntaxthreads" />
+            <PureContainerIcon
+              link={"https://www.linkedin.com/in/syntax-threads-697a52345/"}>
+              <FaLinkedin className="text-2xl" />
+            </PureContainerIcon>
+            <PureContainerIcon
+              link={"https://www.instagram.com/syntaxthreads_official/"}>
+              <FaSquareInstagram className="text-2xl" />
+            </PureContainerIcon>
           </div>
         </div>
       </div>
