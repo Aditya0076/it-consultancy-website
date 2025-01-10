@@ -1,4 +1,5 @@
 import { Card } from "flowbite-react";
+import { useState } from "react";
 
 const services = [
   {
@@ -79,6 +80,18 @@ const services = [
 ];
 
 const Service = () => {
+  const [selectedService, setSelectedService] = useState(services[0]);
+  const serviceModal = document.getElementById("service-modal");
+
+  const handleSelectService = (service) => {
+    setSelectedService(service);
+    serviceModal.showModal();
+  };
+
+  const closeModal = () => {
+    serviceModal.close();
+  };
+
   return (
     <div className="py-10 rounded-md w-full relative max-md:top-32 md:top-50 top-36 min-h-screen">
       <div className="container mx-auto">
@@ -126,15 +139,66 @@ const Service = () => {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="#"
+                <button
+                  onClick={() => handleSelectService(service)}
                   className="mt-auto block w-full rounded-lg bg-cyan-700 px-6 py-3 text-center text-lg font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800">
                   Lihat Detail
-                </a>
+                </button>
               </div>
             </Card>
           ))}
         </div>
+        <dialog
+          id="service-modal"
+          className="mx-auto my-auto rounded-lg w-fit overflow-x-hidden backdrop:blur-3xl"
+          onClose={closeModal}>
+          <Card
+            key={selectedService.id}
+            className="max-w-md mx-auto transition-transform shadow-lg rounded-lg bg-white dark:bg-gray-800">
+            <img
+              src={selectedService.image}
+              className="rounded-t-lg h-[300px] w-full object-cover"
+              alt={selectedService.title}
+            />
+            <div className="p-6 flex flex-col h-full">
+              <a href="#">
+                <h5 className="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white mb-2">
+                  {selectedService.title}
+                </h5>
+              </a>
+              <p className="text-gray-600 dark:text-gray-400 mb-4 text-lg">
+                {selectedService.description}
+              </p>
+              <h6 className="font-bold text-xl text-gray-800 dark:text-gray-200 mb-2">
+                {selectedService.content.heading}
+              </h6>
+              <p className="text-gray-600 dark:text-gray-400 mb-4 text-lg">
+                {selectedService.content.text}
+              </p>
+              <ul className="list-none mb-4 flex-grow">
+                {selectedService.content.list.map((item, index) => (
+                  <li
+                    key={index}
+                    className="flex items-center mb-2 text-lg text-gray-600 dark:text-gray-400">
+                    <svg
+                      className="h-5 w-5 text-green-500 mr-2 flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.629 12.133l-3.5-3.5a1 1 0 00-1.415 1.415l4.5 4.5a1 1 0 001.415 0l10-10a1 1 0 00-1.415-1.415l-9.293 9.293z" />
+                    </svg>
+                    <span className="ml-2">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <button
+                className="mt-auto block w-full rounded-lg bg-cyan-700 px-6 py-3 text-center text-lg font-medium text-white hover:bg-cyan-800 focus:outline-none focus:ring-4 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800"
+                onClick={closeModal}>
+                Close
+              </button>
+            </div>
+          </Card>
+        </dialog>
       </div>
     </div>
   );

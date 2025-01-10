@@ -6,14 +6,14 @@ import Twitter from "./microComponents/icons/Twitter";
 
 const FooterComponent = () => {
   const followUs = [
-    {
-      text: "Github",
-      link: "https://github.com/syntaxthreads",
-    },
-    {
-      text: "Twitter",
-      link: "https://twitter.com/syntaxthreads",
-    },
+    // {
+    //   text: "Github",
+    //   link: "https://github.com/syntaxthreads",
+    // },
+    // {
+    //   text: "Twitter",
+    //   link: "https://twitter.com/syntaxthreads",
+    // },
     {
       text: "Instagram",
       link: "https://www.instagram.com/syntaxthreads/",

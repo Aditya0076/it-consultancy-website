@@ -83,30 +83,6 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* Start Key Statistics Section */}
-      <div className="container mx-auto mt-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center transition-transform transform hover:scale-105 hover:shadow-xl mb-4">
-            <i className="fas fa-users text-4xl text-cyan-600 mb-4"></i>
-            <h3 className="text-3xl font-bold dark:text-white">150,000+</h3>
-            <p className="text-gray-600 dark:text-gray-300">
-              Klien di Seluruh Dunia
-            </p>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center transition-transform transform hover:scale-105 hover:shadow-xl mb-4">
-            <i className="fas fa-project-diagram text-4xl text-cyan-600 mb-4"></i>
-            <h3 className="text-3xl font-bold dark:text-white">1,800+</h3>
-            <p className="text-gray-600 dark:text-gray-300">Proyek Selesai</p>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center transition-transform transform hover:scale-105 hover:shadow-xl mb-4">
-            <i className="fas fa-star text-4xl text-cyan-600 mb-4"></i>
-            <h3 className="text-3xl font-bold dark:text-white">98%</h3>
-            <p className="text-gray-600 dark:text-gray-300">Rating Positif</p>
-          </div>
-        </div>
-      </div>
-      {/* End Key Statistics Section */}
-
       {/* Start Team Area */}
       <div className="team-style-one-area p-12 md:p-16 lg:p-24">
         <div className="container mx-auto">

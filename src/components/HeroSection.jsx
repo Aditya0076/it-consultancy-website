@@ -53,7 +53,8 @@ const HeroSection = ({ isDarkMode }) => {
 
   return (
     <>
-      <div className={`h-screen w-full flex items-center absolute text-white`}>
+      <div
+        className={`h-screen w-full flex items-center relative text-white px-12`}>
         <div className="container mx-auto flex flex-col lg:flex-row items-center relative z-10 gap-6">
           <div className="text-center lg:text-left lg:w-1/2">
             <h4 className="text-xl max-md:text-base font-semibold">
