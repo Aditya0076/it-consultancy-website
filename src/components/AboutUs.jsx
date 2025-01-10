@@ -1,44 +1,72 @@
-import { Card } from "flowbite-react";
-
 const TeamMember = ({ name, role, image }) => (
-  <div className="team-member flex flex-col items-center m-2">
-    <Card className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl">
-      <img
-        src={image}
-        alt={`${name} - Gambar tidak ditemukan`}
-        className="w-full h-48 object-cover mb-4"
-      />
-      <h4 className="text-3xl font-semibold text-gray-800 dark:text-white mb-1">
-        <a
-          href="team-details.html"
-          className="hover:text-cyan-600 transition-colors duration-200">
-          {name}
-        </a>
-      </h4>
-      <span className="text-gray-600 dark:text-gray-300 text-lg">{role}</span>
-      <div className="p-2">
-        <ul className="social flex justify-center space-x-4">
-          <li className="facebook">
-            <a
-              href="#"
-              className="text-blue-600 hover:text-blue-800 transition-colors duration-200">
-              <i className="fab fa-facebook-f"></i>
-            </a>
-          </li>
-          <li className="twitter">
-            <a
-              href="#"
-              className="text-blue-400 hover:text-blue-600 transition-colors duration-200">
-              <i className="fab fa-twitter"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </Card>
-  </div>
+  <section className="bg-lightCustomGradient dark:bg-darkCustomGradient shadow-lg rounded-xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl w-[250px] px-4 py-6">
+    <img
+      src={image}
+      alt={`${name} - Gambar tidak ditemukan`}
+      className="w-24 h-24 object-cover mb-4 mx-auto rounded-full"
+    />
+    <h4 className="text-xl font-semibold text-gray-800 dark:text-white">
+      <a
+        href="team-details.html"
+        className="hover:text-cyan-600 transition-colors duration-200">
+        {name}
+      </a>
+    </h4>
+    <span className="text-gray-600 dark:text-gray-300 text-sm">{role}</span>
+    {/* <div className="p-2">
+      <ul className="social flex justify-center space-x-4">
+        <li className="facebook">
+          <a
+            href="#"
+            className="text-blue-600 hover:text-blue-800 transition-colors duration-200">
+            <i className="fab fa-facebook-f">Twittwer</i>
+          </a>
+        </li>
+        <li className="twitter">
+          <a
+            href="#"
+            className="text-blue-400 hover:text-blue-600 transition-colors duration-200">
+            <i className="fab fa-twitter">facebook</i>
+          </a>
+        </li>
+      </ul>
+    </div> */}
+  </section>
 );
 
 const AboutUs = () => {
+  const developers = [
+    {
+      name: "Moh Solehuddin",
+      role: "Fullstack Developer",
+      image:
+        "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
+    },
+    {
+      name: "Aditya Bayu Prabowo",
+      role: "Backend Developer",
+      image:
+        "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
+    },
+    {
+      name: "Zainu Firdaus",
+      role: "Frontend Developer",
+      image:
+        "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
+    },
+    {
+      name: "Ikbal",
+      role: "Backend Developer",
+      image:
+        "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
+    },
+    {
+      name: "Mirza",
+      role: "Backend Developer",
+      image:
+        "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
+    },
+  ];
   return (
     <div className="py-12 font-sans relative max-md:top-32 md:top-50 top-36 min-h-screen">
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-center">
@@ -92,27 +120,15 @@ const AboutUs = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-12">
-            <TeamMember
-              name="Alex Martinez"
-              role="Desainer Utama"
-              image="assets/img/800x800.png"
-            />
-            <TeamMember
-              name="Seth Norwood"
-              role="Analisis Utama"
-              image="assets/img/800x800.png"
-            />
-            <TeamMember
-              name="Sabrina Brooks"
-              role="Strategi SEO"
-              image="assets/img/800x800.png"
-            />
-            <TeamMember
-              name="George Monroy"
-              role="Manajer Akun"
-              image="assets/img/800x800.png"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-12">
+            {developers.map((developer, index) => (
+              <TeamMember
+                key={index}
+                name={developer.name}
+                role={developer.role}
+                image={developer.image}
+              />
+            ))}
           </div>
         </div>
       </div>
