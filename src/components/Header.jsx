@@ -98,16 +98,24 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
           id="navbar-multi-level">
           <ul className="flex flex-col font-medium p-4 md:p-0 border rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 max-md:dark:bg-gray-900 max-md:bg-white">
             {navigations.map((navigation) => (
-              <li key={navigation.text}>
+              <li
+                key={navigation.text}
+                className={`${
+                  location.pathname === navigation.to
+                    ? ` px-2 py-1 rounded-md border-2 ${
+                        isScrolling
+                          ? "border-gray-900 dark:border-white"
+                          : "border-white"
+                      }`
+                    : ""
+                }`}>
                 <NavLink
                   to={navigation.to}
                   className={`block py-3 px-4 text-lg rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 ${
                     isScrolling
                       ? "text-gray-900 dark:text-white"
                       : "text-white max-md:text-gray-900 max-md:dark:text-white"
-                  } md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent ${
-                    location.pathname === navigation.to ? "underline" : ""
-                  }`}>
+                  } md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent`}>
                   {navigation.text}
                 </NavLink>
               </li>
