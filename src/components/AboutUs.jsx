@@ -42,29 +42,28 @@ const AboutUs = () => {
       image: "/assets/img/developers/MohSolehuddin_frontend.jpeg",
     },
     {
+      name: "Ilham Fitri Ardiansyah",
+      role: "Frontend Developer",
+      image:
+        "/assets/img/developers/Ilham Fitri Ardiansyah Front End Engineer.jpg",
+    },
+    {
       name: "Aditya Bayu Prabowo",
       role: "Backend Developer",
       image:
         "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
     },
-    // {
-    //   name: "Zainu Firdaus",
-    //   role: "Frontend Developer",
-    //   image:
-    //     "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
-    // },
-    // {
-    //   name: "Ikbal",
-    //   role: "Backend Developer",
-    //   image:
-    //     "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
-    // },
-    // {
-    //   name: "Mirza",
-    //   role: "Backend Developer",
-    //   image:
-    //     "/assets/img/developers/Aditya Bayu Prabowo_Back End Developer.png",
-    // },
+    {
+      name: "Muhammad Iqbal",
+      role: "Backend Developer",
+      image: "/assets/img/developers/Muhammad Iqbal_Backend Developer.png",
+    },
+    {
+      name: "Mochammad Mirza Kharisma",
+      role: "Backend Developer",
+      image:
+        "/assets/img/developers/Mochammad Mirza Kharisma_Back-End Engineer.JPG",
+    },
   ];
   return (
     <div className="py-12 font-sans relative max-md:top-32 md:top-50 top-36 min-h-screen">

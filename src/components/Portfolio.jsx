@@ -39,12 +39,18 @@ const projects = [
     image: "../../assets/resourceImage/6.png",
     link: "https://risharchery.com/",
   },
-  // {
-  //   title: "Msytc",
-  //   description: "Portofolio",
-  //   image: "../../assets/resourceImage/4.png",
-  //   link: "https://risharchery.com/",
-  // },
+  {
+    title: "Menebak Kata",
+    description: "Game manebak kata",
+    image: "../../assets/resourceImage/MenebakKata.png",
+    link: "https://word-guess-react.vercel.app",
+  },
+  {
+    title: "Catatan",
+    description: "Website catatan",
+    image: "../../assets/resourceImage/catatan.png",
+    link: "https://personal-notes-react-theta.vercel.app",
+  },
 ];
 
 const Portfolio = () => {
