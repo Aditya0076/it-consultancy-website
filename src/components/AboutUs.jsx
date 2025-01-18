@@ -13,24 +13,6 @@ const TeamMember = ({ name, role, image }) => (
       </a>
     </h4>
     <span className="text-gray-600 dark:text-gray-300 text-sm">{role}</span>
-    {/* <div className="p-2">
-      <ul className="social flex justify-center space-x-4">
-        <li className="facebook">
-          <a
-            href="#"
-            className="text-blue-600 hover:text-blue-800 transition-colors duration-200">
-            <i className="fab fa-facebook-f">Twittwer</i>
-          </a>
-        </li>
-        <li className="twitter">
-          <a
-            href="#"
-            className="text-blue-400 hover:text-blue-600 transition-colors duration-200">
-            <i className="fab fa-twitter">facebook</i>
-          </a>
-        </li>
-      </ul>
-    </div> */}
   </section>
 );
 
