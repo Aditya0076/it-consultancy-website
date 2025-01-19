@@ -19,13 +19,13 @@ const HeroSection = ({ isDarkMode }) => {
         className={`h-screen w-full flex items-center relative text-white px-12`}>
         <div className="container mx-auto flex flex-col lg:flex-row items-center relative z-10 gap-6">
           <div className="text-center lg:text-left lg:w-1/2">
-            <h4 className="text-xl max-md:text-base font-semibold">
+            <h4 className="text-4xl max-md:text-base font-semibold sm:text-xs">
               MEMPERDAYAKAN BISNIS ANDA
             </h4>
-            <h2 className="text-6xl max-md:text-3xl font-bold mt-2">
+            <h2 className="lg:text-4xl text-2xl md:text-2xl font-bold mt-2">
               Solusi Web & Mobile Inovatif
             </h2>
-            <p className="mt-4 text-lg max-md:text-sm leading-relaxed">
+            <p className="mt-4 text-xs md:text-sm leading-relaxed">
               Ubah ide Anda menjadi solusi digital yang kuat dengan layanan
               pengembangan web dan mobile kami yang canggih. Kami menyediakan
               layanan pembuatan web dan mobile yang sesuai dengan kebutuhan
@@ -45,7 +45,7 @@ const HeroSection = ({ isDarkMode }) => {
               </Link>
             </div>
           </div>
-          <div className="lg:w-1/2 mt-6 lg:mt-0 max-md:w-3/4">
+          <div className="lg:w-1/2 mt-6 lg:mt-0 md:w-1/2 w-3/4">
             <div className="relative">
               <img
                 src={projects[currentIndex].image}

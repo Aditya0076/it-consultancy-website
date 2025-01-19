@@ -50,7 +50,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
           ? `bg-white border-b-2 border-gray-200 dark:bg-gray-900`
           : "bg-transparent max-md:dark:bg-gray-900 max-md:bg-white"
       } fixed z-50 w-screen`}>
-      <div className="max-w-screen-xl flex md:flex-wrap gap-6 items-center justify-between mx-auto p-8">
+      <div className="max-w-screen-xl flex md:flex-wrap gap-6 items-center justify-between mx-auto lg:p-8 p-2">
         <NavLink
           to="/"
           className="flex items-center justify-center w-full md:w-auto">
@@ -60,7 +60,7 @@ const Header = ({ toggleDarkMode, isDarkMode }) => {
             alt="Syntax Threads Generation Logo"
           />
           <span
-            className={`self-center text-lg md:text-xl font-semibold whitespace-nowrap ${
+            className={`self-center sm:text-xl lg:text-lg md:text-xl font-semibold whitespace-nowrap ${
               isScrolling
                 ? "text-gray-900 dark:text-white"
                 : "text-white max-md:text-gray-900 max-md:dark:text-white"
