@@ -1,5 +1,5 @@
 const TeamMember = ({ name, role, image }) => (
-  <section className="bg-lightCustomGradient dark:bg-darkCustomGradient shadow-lg rounded-xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl w-[250px] px-4 py-6">
+  <section className="bg-lightCustomGradient dark:bg-darkCustomGradient shadow-lg rounded-xl overflow-hidden transition-transform transform hover:scale-105 hover:shadow-xl w-[300px] px-4 py-6">
     <img
       src={image}
       alt={`${name} - Gambar tidak ditemukan`}
@@ -28,6 +28,12 @@ const AboutUs = () => {
       role: "Frontend Developer",
       image:
         "/assets/img/developers/Ilham Fitri Ardiansyah Front End Engineer.jpg",
+    },
+    {
+      name: "Zainu firdaus imansyah",
+      role: "Frontend Developer",
+      image:
+        "/assets/img/developers/Zainu firdaus imansyah_Front end developer.jpg",
     },
     {
       name: "Aditya Bayu Prabowo",
