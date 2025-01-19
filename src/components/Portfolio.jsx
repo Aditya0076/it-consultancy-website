@@ -34,18 +34,18 @@ const Portfolio = () => {
             <button
               onClick={prevPage}
               disabled={currentPage === 0}
-              className={`text-9xl ${
+              className={`h-screen text-4xl md:text-6xl lg:text-9xl ${
                 currentPage === 0 ? "text-gray-500" : "text-white"
               } transition-all`}>
               <IoChevronBack />
             </button>
           )}
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {currentProjects.map((project, index) => (
               <Card
                 key={index}
-                className="max-w-lg mx-auto transition-transform transform hover:scale-105 shadow-lg rounded-lg bg-white dark:bg-gray-800"
+                className="h-full w-full max-w-lg mx-auto transition-transform transform hover:scale-105 shadow-lg rounded-lg bg-white dark:bg-gray-800"
                 imgAlt={project.title}
                 imgSrc={project.image}>
                 <div className="p-6">
@@ -73,7 +73,7 @@ const Portfolio = () => {
               disabled={
                 currentPage >= Math.ceil(projects.length / itemsPerPage) - 1
               }
-              className={`text-9xl ${
+              className={`h-screen text-4xl md:text-6xl lg:text-9xl ${
                 currentPage >= Math.ceil(projects.length / itemsPerPage) - 1
                   ? "text-gray-500"
                   : "text-white"
