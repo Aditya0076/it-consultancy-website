@@ -6,6 +6,7 @@ import projects from "../constan/projects";
 const HeroSection = ({ isDarkMode }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  console.log("trigger");
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
